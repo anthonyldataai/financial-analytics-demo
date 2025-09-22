@@ -1,18 +1,12 @@
 // .devcontainer/devcontainer.json
 {
-  "name": "Financial Analytics Dev",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", // use ubuntu for apt support
+
+  "name": "Financial Analyst - GCP Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/apt-packages:1": {
-      "packages": [
-        "python3",
-        "python3-pip",
-        "curl",
-        "git",
-        "google-cloud-sdk" // optional: gcloud CLI
-      ]
-    }
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/google-cloud-sdk:1": {}
   },
-  "postCreateCommand": "pip install --upgrade pip",
-  "remoteUser": "vscode"
+  "postCreateCommand": "gcloud --version"
+
 }
