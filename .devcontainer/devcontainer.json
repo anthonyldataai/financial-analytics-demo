@@ -1,0 +1,9 @@
+{
+  "name": "GCP-Enabled Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/google-cloud-sdk:1": {}
+  },
+  "postCreateCommand": "mkdir -p /workspaces/keys"
+}
