@@ -1,16 +1,23 @@
-# financial-analytics-demo 
 (🛠️In Progress🛠️ - ⚠️Expected to be completed by 1 to 2 week)
 Financial Analytics Demo Platform using Databricks, BigQuery, KNIME, Python, and Tableau Public. Includes ETL pipelines, compliance checks, churn insights, trend/forecast analysis of AI-related stocks, and executive dashboards. Built for portfolio/job showcase.
 
 
 # Financial Analytics Demo Platform
 This project showcases a **mock Financial Analytics Platform** built entirely with **free and open-source tools**/
-It demonstrates **ETL pipelines, compliance checks, churn analytics, market trend/forecasting, and dashboards** — skills essential for data analyst, data engineer, and technical PM roles.
+This project demonstrates a lightweight data engineering pipeline using Python, Google Cloud Storage (GCS), BigQuery, and Cloud Run.
+It fetches market data from a source CSV, stages it in GCS, and loads it into a partitioned and clustered BigQuery table for analytics.
+It demonstrates **ETL pipelines, compliance checks, churn analytics, market trend/forecasting, and dashboards** .
 
 
 **Tools:** Databricks CE, BigQuery Sandbox, KNIME, Python (Pandas/Prophet), Tableau Public.  
 
 **Features:**  
+- Automated ETL pipeline (Python → GCS → BigQuery)
+- Partitioned and clustered BigQuery table design (Date / Ticker)
+- Cloud Run + Cloud Scheduler for scheduled jobs
+- Configurable with environment variables (.env)
+- Sample dataset and logs for reproducibility
+- Visual workflow diagram
 - Clean & reconcile financial + customer datasets.  
 - SQL compliance & churn insights.  
 - AI stock trend analysis + simple forecast.  
@@ -55,6 +62,20 @@ It demonstrates **ETL pipelines, compliance checks, churn analytics, market tren
 - **Compliance Monitoring**: Highlight missing customer data or anomalies in trade feeds.
 
 ---
+
+🗄️ BigQuery Schema
+
+See bigquery_schema.sql for table definition.
+
+📊 Workflow Diagram
+── docs/
+│   └── etl_flow.png             
+
+📑 Sample Data
+── data/
+│   └── ai_stocks.csv             
+
+Example of transformed dataset: sample_output.csv
 
 ## ⚠️ Disclaimer
 This project is for **educational and portfolio purposes only**.  
